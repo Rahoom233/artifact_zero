@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dofebc80f4kus"]
+
+[ext_resource type="Script" uid="uid://bdai03rnmssgh" path="res://scenes/player/scripts/player_start_position.gd" id="1_dyo34"]
+
+[node name="player start position" type="Marker2D" unique_id=529227617 groups=["player_position_marker"]]
+script = ExtResource("1_dyo34")
