@@ -16,7 +16,7 @@ var type_names = [
 var max_variations = {
 	1: {
 		0: 4,  # empty
-		#1: 3,  # locked
+		1: 1,  # locked
 		#2: 2,  # boulder
 		#3: 4,  # resource
 		#4: 2,  # mirror
@@ -26,7 +26,7 @@ var max_variations = {
 
 # Per‑area weights: area_number -> { type_index: weight }
 var area_chamber_weights = {
-	1: {0: 100, 1: 0, 2: 0, 3: 0, 4: 0},
+	1: {0: 20, 1: 80, 2: 0, 3: 0, 4: 0},
 	# Add more areas later
 }
 

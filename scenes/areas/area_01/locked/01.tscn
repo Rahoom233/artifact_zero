@@ -1,0 +1,69 @@
+[gd_scene format=4 uid="uid://dbrs38dv5svrk"]
+
+[ext_resource type="Script" uid="uid://slgn1ofvi4vt" path="res://scenes/areas/area_01/locked/locked chamber.gd" id="1_gtpsy"]
+[ext_resource type="TileSet" uid="uid://ttaoqjtpmafd" path="res://resources/tile sets/area 1 tileset.tres" id="2_gtpsy"]
+[ext_resource type="PackedScene" uid="uid://boh8ea6h48707" path="res://scenes/level changer/level_changer.tscn" id="3_1awtx"]
+[ext_resource type="PackedScene" uid="uid://dofebc80f4kus" path="res://scenes/player/player_start_position.tscn" id="4_ia55q"]
+[ext_resource type="PackedScene" uid="uid://1evc5e6esnvm" path="res://scenes/player/player.tscn" id="5_1pcd2"]
+[ext_resource type="PackedScene" uid="uid://d2exkgs0h72b6" path="res://scenes/areas/area_01/locked/scenes/door.tscn" id="5_gtpsy"]
+
+[node name="1" type="Node2D" unique_id=47420351]
+script = ExtResource("1_gtpsy")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1121101794]
+tile_map_data = PackedByteArray("AAD6//3/AQAAAAAAAAAIAP3/AQACAAAAAAD6/wYAAQAAAAEAAAD6/wcAAQAAAAIAAAAIAAcAAQACAAIAAAD7/wcAAQABAAIAAAD8/wcAAQABAAIAAAD9/wcAAQABAAIAAAD+/wcAAQABAAIAAAD//wcAAQABAAIAAAAAAAcAAQABAAIAAAACAAcAAQABAAIAAAADAAcAAQABAAIAAAAEAAcAAQABAAIAAAAFAAcAAQABAAIAAAAGAAcAAQABAAIAAAAHAAcAAQABAAIAAAAIAAYAAQACAAEAAAAIAAUAAQACAAEAAAAIAAQAAQACAAEAAAAIAAMAAQACAAEAAAAIAAEAAQACAAEAAAAIAAAAAQACAAEAAAAIAP//AQACAAEAAAAIAP7/AQACAAEAAAAHAP3/AQABAAAAAAAGAP3/AQABAAAAAAAFAP3/AQABAAAAAAAEAP3/AQABAAAAAAADAP3/AQABAAAAAAACAP3/AQABAAAAAAAAAP3/AQABAAAAAAD///3/AQABAAAAAAD+//3/AQABAAAAAAD9//3/AQABAAAAAAD8//3/AQABAAAAAAD7//3/AQABAAAAAAD6/wUAAQAAAAEAAAD6/wQAAQAAAAEAAAD6/wMAAQAAAAEAAAD6/wEAAQAAAAEAAAD6/wAAAQAAAAEAAAD6////AQAAAAEAAAD6//7/AQAAAAEAAAD+/wEAAQAAAAUAAAD+/wAAAQAAAAUAAAD+////AQAAAAUAAAD+//7/AQAAAAUAAAD9//7/AQAAAAUAAAD8//7/AQAAAAUAAAD7//7/AQAAAAUAAAD7////AQAAAAUAAAD7/wAAAQAAAAUAAAD7/wEAAQAAAAUAAAD7/wIAAQAAAAUAAAD7/wMAAQAAAAUAAAD7/wQAAQAAAAUAAAD7/wUAAQAAAAUAAAD7/wYAAQAAAAYAAAD8/wYAAQAAAAYAAAD8/wUAAQAAAAUAAAD8/wQAAQAAAAUAAAD8/wMAAQAAAAUAAAD8/wIAAQAAAAUAAAD8/wEAAQAAAAUAAAD8/wAAAQAAAAUAAAD8////AQAAAAUAAAD9////AQAAAAUAAAD9/wAAAQAAAAUAAAD9/wEAAQAAAAUAAAD9/wIAAQAAAAUAAAD9/wMAAQAAAAUAAAD9/wQAAQAAAAUAAAD9/wUAAQAAAAUAAAD9/wYAAQAAAAYAAAD+/wYAAQAAAAYAAAD+/wUAAQAAAAUAAAD+/wQAAQAAAAUAAAD+/wMAAQAAAAUAAAD+/wIAAQAAAAUAAAD//wIAAQAAAAUAAAD//wEAAQAAAAUAAAD//wAAAQAAAAUAAAD/////AQAAAAUAAAD///7/AQAAAAUAAAAAAP7/AQAAAAUAAAAAAP//AQAAAAUAAAAAAAAAAQAAAAUAAAAAAAEAAQAAAAUAAAAAAAIAAQAAAAUAAAAAAAMAAQAAAAUAAAD//wMAAQAAAAUAAAD//wQAAQAAAAUAAAD//wUAAQAAAAUAAAD//wYAAQAAAAYAAAAAAAYAAQAAAAYAAAAAAAUAAQAAAAUAAAAAAAQAAQAAAAUAAAABAAQAAQAAAAUAAAABAAMAAQAAAAUAAAABAAIAAQAAAAUAAAABAAEAAQAAAAUAAAABAAAAAQAAAAUAAAABAP//AQAAAAUAAAABAP7/AQAAAAUAAAACAP7/AQAAAAUAAAACAP//AQAAAAUAAAACAAAAAQAAAAUAAAACAAEAAQAAAAUAAAACAAIAAQAAAAUAAAACAAMAAQAAAAUAAAACAAQAAQAAAAUAAAACAAUAAQAAAAUAAAABAAUAAQAAAAUAAAABAAYAAQAAAAYAAAACAAYAAQAAAAYAAAADAAYAAQAAAAYAAAADAAUAAQAAAAUAAAADAAQAAQAAAAUAAAADAAMAAQAAAAUAAAADAAIAAQAAAAUAAAADAAEAAQAAAAUAAAADAAAAAQAAAAUAAAADAP//AQAAAAUAAAADAP7/AQAAAAUAAAAEAP7/AQAAAAUAAAAEAP//AQAAAAUAAAAEAAAAAQAAAAUAAAAEAAEAAQAAAAUAAAAEAAIAAQAAAAUAAAAEAAMAAQAAAAUAAAAEAAQAAQAAAAUAAAAEAAUAAQAAAAUAAAAEAAYAAQAAAAYAAAAFAAYAAQAAAAYAAAAFAAUAAQAAAAUAAAAFAAQAAQAAAAUAAAAFAAMAAQAAAAUAAAAFAAIAAQAAAAUAAAAFAAEAAQAAAAUAAAAFAAAAAQAAAAUAAAAFAP//AQAAAAUAAAAFAP7/AQAAAAUAAAAGAP7/AQAAAAUAAAAGAP//AQAAAAUAAAAGAAAAAQAAAAUAAAAGAAEAAQAAAAUAAAAGAAIAAQAAAAUAAAAGAAMAAQAAAAUAAAAGAAQAAQAAAAUAAAAGAAUAAQAAAAUAAAAGAAYAAQAAAAYAAAAHAAYAAQAAAAYAAAAHAAUAAQAAAAUAAAAHAAQAAQAAAAUAAAAHAAMAAQAAAAUAAAAHAAIAAQAAAAUAAAAHAAEAAQAAAAUAAAAHAAAAAQAAAAUAAAAHAP//AQAAAAUAAAAHAP7/AQAAAAUAAAD6/wIAAQAAAAUAAAABAP3/AQAAAAUAAAAIAAIAAQAAAAUAAAABAAcAAQAAAAUAAAA=")
+tile_set = ExtResource("2_gtpsy")
+
+[node name="level changers" type="Node" parent="." unique_id=440437471]
+
+[node name="level changer" parent="level changers" unique_id=4315693 instance=ExtResource("3_1awtx")]
+position = Vector2(12, -20)
+
+[node name="level changer3" parent="level changers" unique_id=694816623 instance=ExtResource("3_1awtx")]
+position = Vector2(12, 60)
+target_direction = 1
+
+[node name="level changer2" parent="level changers" unique_id=1295786785 instance=ExtResource("3_1awtx")]
+position = Vector2(-44, 20)
+target_direction = 2
+
+[node name="level changer4" parent="level changers" unique_id=1197572509 instance=ExtResource("3_1awtx")]
+position = Vector2(68, 20)
+target_direction = 3
+
+[node name="player positon markers" type="Node" parent="." unique_id=677880488]
+
+[node name="down player marker" parent="player positon markers" unique_id=529227617 instance=ExtResource("4_ia55q")]
+position = Vector2(12, 52)
+current_position = "Down"
+
+[node name="left player marker" parent="player positon markers" unique_id=807024750 instance=ExtResource("4_ia55q")]
+position = Vector2(-36, 20)
+current_position = "Left"
+
+[node name="right player marker" parent="player positon markers" unique_id=1357896014 instance=ExtResource("4_ia55q")]
+position = Vector2(60, 20)
+current_position = "Right"
+
+[node name="up player marker" parent="player positon markers" unique_id=822255863 instance=ExtResource("4_ia55q")]
+position = Vector2(12, -12)
+current_position = "Up"
+
+[node name="doors" type="Node" parent="." unique_id=672046011]
+
+[node name="door" parent="doors" unique_id=1606783442 instance=ExtResource("5_gtpsy")]
+position = Vector2(12, -20)
+
+[node name="door2" parent="doors" unique_id=1606664807 instance=ExtResource("5_gtpsy")]
+position = Vector2(-44, 20)
+my_direction = 2
+
+[node name="door3" parent="doors" unique_id=1795968239 instance=ExtResource("5_gtpsy")]
+position = Vector2(68, 20)
+my_direction = 3
+
+[node name="door4" parent="doors" unique_id=65347013 instance=ExtResource("5_gtpsy")]
+position = Vector2(12, 60)
+my_direction = 1
+
+[node name="player" parent="." unique_id=150489247 instance=ExtResource("5_1pcd2")]
