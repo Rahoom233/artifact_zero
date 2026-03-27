@@ -25,6 +25,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		if player_touching:
 			play_animation()
+			PlayerManager.update_player_luck(1, 5)
 			#LevelManager.current_keys -= 1
 			await animated_sprite.animation_finished
 			await get_tree().create_timer(0).timeout

@@ -16,17 +16,17 @@ var type_names = [
 var max_variations = {
 	1: {
 		0: 4,  # empty
-		1: 1,  # locked
-		#2: 2,  # boulder
-		#3: 4,  # resource
-		#4: 2,  # mirror
+		1: 4,  # locked
+		#2: 2,  # statue
+		#3: 4,  # hollow
+		#4: 2,  # fountain
 	},
 	# Add more areas as you design them
 }
 
 # Per‑area weights: area_number -> { type_index: weight }
 var area_chamber_weights = {
-	1: {0: 20, 1: 80, 2: 0, 3: 0, 4: 0},
+	1: {0: 50, 1: 50, 2: 0, 3: 0, 4: 0},
 	# Add more areas later
 }
 
@@ -48,6 +48,8 @@ func load_first_room():
 	load_room_by_type(0)  # empty chamber
 
 func Change_level(move_direction: String):
+	update_room_on_player_luck()
+	
 	var next_type = get_random_chamber_type()
 	PlayerManager.saved_player_direction = direction_string_to_vector(move_direction)
 	load_room_by_type(next_type)
@@ -75,6 +77,7 @@ func load_room_by_type(type_index: int):
 	await Transition.fade_out()
 	
 	get_tree().call_deferred("change_scene_to_packed", scene)
+	print("room loaded: ", type_name)
 
 
 func get_random_chamber_type() -> int:
@@ -105,3 +108,13 @@ func advance_to_next_area():
 	current_area += 1
 	rooms_visited_in_area = 0
 	print("Advancing to area ", current_area)
+
+func update_room_on_player_luck() -> void:
+	if PlayerManager.player_luck_level >= 0:
+		area_chamber_weights = {
+			1: {0: 50, 1: 50, 2: 0, 3: 0, 4: 0},
+		}
+	elif PlayerManager.player_luck_level >= 2:
+		area_chamber_weights = {
+			1: {0: 50, 1: 50, 2: 0, 3: 0, 4: 0},
+		}

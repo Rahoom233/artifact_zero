@@ -19,7 +19,6 @@ func _ready() -> void:
 	#====================================================================================
 	#-----------------------------------setting doors---------------------------------------
 	doors = get_tree().get_nodes_in_group("door")
-	print(doors)
 	# deleting the door on the wall
 	for d in doors:
 		var dir_name = d.get_direction()
@@ -35,8 +34,3 @@ func _ready() -> void:
 	#fade in and game starting
 	await Transition.fade_in()
 	get_tree().paused = false
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass

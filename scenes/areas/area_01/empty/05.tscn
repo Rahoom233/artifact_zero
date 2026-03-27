@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dofebc80f4kus" path="res://scenes/player/player_start_position.tscn" id="4_gl0ig"]
 [ext_resource type="PackedScene" uid="uid://1evc5e6esnvm" path="res://scenes/player/player.tscn" id="5_bdjqi"]
 
-[node name="1" type="Node2D" unique_id=47420351]
+[node name="5" type="Node2D" unique_id=47420351]
 script = ExtResource("1_c8scr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1121101794]
