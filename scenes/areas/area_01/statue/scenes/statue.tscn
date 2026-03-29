@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cxgr4nj1fvqx0"]
+
+[ext_resource type="Script" uid="uid://dlw4tbvq8kuhq" path="res://scenes/areas/area_01/statue/scenes/statue.gd" id="1_iivxr"]
+[ext_resource type="Texture2D" uid="uid://0nnoiwax2f63" path="res://assets/art/chambers/area 1 (3 keys)/statue/statues.png" id="2_b88ua"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq7lq"]
+atlas = ExtResource("2_b88ua")
+region = Rect2(0, 8, 8, 8)
+
+[node name="statue" type="Node2D" unique_id=1268039314]
+script = ExtResource("1_iivxr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2083376125]
+texture = SubResource("AtlasTexture_vq7lq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=27441469]
+zoom = Vector2(7, 7)

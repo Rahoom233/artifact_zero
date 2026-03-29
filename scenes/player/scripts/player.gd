@@ -21,6 +21,10 @@ func _ready() -> void:
 	update_animaton()
 	target_position = position
 
+func _process(_delta: float) -> void:
+	
+	var _object = ray_cast.get_collider()
+
 
 func _physics_process(delta):
 	handle_input()
