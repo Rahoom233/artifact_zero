@@ -1,12 +1,14 @@
 [gd_scene format=4 uid="uid://p1hf4nbsr8no"]
 
-[ext_resource type="Script" uid="uid://jall6g4q41vv" path="res://scenes/areas/area_01/empty/empty chamber.gd" id="1_8ga4o"]
+[ext_resource type="Script" uid="uid://b4fw2qx8c4783" path="res://scenes/areas/area_01/statue/statue_chamber.gd" id="1_8ga4o"]
 [ext_resource type="TileSet" uid="uid://ttaoqjtpmafd" path="res://resources/tile sets/area 1 tileset.tres" id="2_4i0m1"]
 [ext_resource type="PackedScene" uid="uid://boh8ea6h48707" path="res://scenes/level changer/level_changer.tscn" id="3_hbnkk"]
 [ext_resource type="PackedScene" uid="uid://dofebc80f4kus" path="res://scenes/player/player_start_position.tscn" id="4_arujc"]
+[ext_resource type="PackedScene" uid="uid://cxgr4nj1fvqx0" path="res://scenes/areas/area_01/statue/scenes/statue.tscn" id="5_hbnkk"]
 [ext_resource type="PackedScene" uid="uid://1evc5e6esnvm" path="res://scenes/player/player.tscn" id="5_juh1e"]
+[ext_resource type="PackedScene" uid="uid://dy5v74a6kddkc" path="res://scenes/areas/area_01/statue/scenes/statue_base.tscn" id="6_arujc"]
 
-[node name="1" type="Node2D" unique_id=47420351]
+[node name="1" type="Node2D" unique_id=47420351 groups=["statue and base"]]
 script = ExtResource("1_8ga4o")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1121101794]
@@ -47,5 +49,37 @@ current_position = "Right"
 [node name="up player marker" parent="player positon markers" unique_id=822255863 instance=ExtResource("4_arujc")]
 position = Vector2(12, -12)
 current_position = "Up"
+
+[node name="statue" type="Node" parent="." unique_id=1044146856]
+
+[node name="statue" parent="statue" unique_id=1268039314 node_paths=PackedStringArray("my_base") instance=ExtResource("5_hbnkk")]
+position = Vector2(-28, -4)
+my_base = NodePath("../../statue base/statue base")
+
+[node name="statue2" parent="statue" unique_id=52778369 node_paths=PackedStringArray("my_base") instance=ExtResource("5_hbnkk")]
+position = Vector2(44, -4)
+my_base = NodePath("../../statue base/statue base2")
+
+[node name="statue3" parent="statue" unique_id=1031577460 node_paths=PackedStringArray("my_base") instance=ExtResource("5_hbnkk")]
+position = Vector2(-12, 28)
+my_base = NodePath("../../statue base/statue base3")
+
+[node name="statue4" parent="statue" unique_id=1851391236 node_paths=PackedStringArray("my_base") instance=ExtResource("5_hbnkk")]
+position = Vector2(20, 12)
+my_base = NodePath("../../statue base/statue base4")
+
+[node name="statue base" type="Node" parent="." unique_id=192231370]
+
+[node name="statue base" parent="statue base" unique_id=1916082588 instance=ExtResource("6_arujc")]
+position = Vector2(-28, 12)
+
+[node name="statue base2" parent="statue base" unique_id=144219789 instance=ExtResource("6_arujc")]
+position = Vector2(44, 20)
+
+[node name="statue base3" parent="statue base" unique_id=597873556 instance=ExtResource("6_arujc")]
+position = Vector2(20, 44)
+
+[node name="statue base4" parent="statue base" unique_id=337061576 instance=ExtResource("6_arujc")]
+position = Vector2(52, 44)
 
 [node name="player" parent="." unique_id=150489247 instance=ExtResource("5_juh1e")]

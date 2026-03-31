@@ -4,12 +4,14 @@ class_name Player
 signal reached_new_tile
 
 # Movement variables
-@export var move_speed: float = 40.0
+@export var move_speed: float
 var is_moving: bool = false
 var current_direction: Vector2 = Vector2.ZERO
 var target_position: Vector2 = Vector2.ZERO
 var tile_size: int = 8
+#player movement variables
 var is_invincible: bool = false
+var is_pushing: bool = false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast2D
@@ -24,6 +26,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	
 	var _object = ray_cast.get_collider()
+	
 
 
 func _physics_process(delta):
@@ -59,9 +62,13 @@ func handle_input():
 func move_player(delta):
 	if is_moving:
 		position = position.move_toward(target_position, move_speed * delta)
+		
 		if position.distance_to(target_position) < 0.1:
 			position = target_position
+			
 			is_moving = false
+			is_pushing = false
+			
 			position_reached()
 
 func position_reached():
@@ -69,7 +76,11 @@ func position_reached():
 	print("position reached")
 
 func update_animaton() -> void:
-	var state: String = "idle_" if not is_moving else "move_"
+	var state: String = "idle_" if !is_moving else "move_"
+	if is_pushing:
+		state = "push_"
+		move_speed = 2 / move_speed
+	
 	
 	match current_direction:
 		Vector2.UP:
@@ -86,4 +97,47 @@ func update_animaton() -> void:
 func can_move(direction: Vector2) -> bool:
 	ray_cast.target_position = direction * tile_size
 	ray_cast.force_raycast_update()
-	return not ray_cast.is_colliding()
+	
+	if not ray_cast.is_colliding():
+		# Empty tile – move player
+		target_position = position + direction * tile_size
+		is_moving = true
+		return true
+	
+	#region raycast checking statue
+	var collider = ray_cast.get_collider()
+	if collider is Area2D:
+		# It's a statue – see if we can push it
+		var statue = collider.get_parent()
+		if statue is Statue:
+			if statue.on_base == true:
+				return false
+		# Move raycast to statue's position to check beyond
+			ray_cast.global_position = statue.global_position
+			ray_cast.target_position = direction * tile_size
+			ray_cast.force_raycast_update()
+		
+			if not ray_cast.is_colliding():
+				# Tile behind statue is free – push it
+				is_pushing = true
+				statue.push(direction)
+				target_position = position + direction * tile_size
+				is_moving = true
+				ray_cast.global_position = global_position
+				return true
+			else:
+				var next_collider = ray_cast.get_collider()
+				var next_node = next_collider.get_parent()
+				if next_node is Statue_Base:
+					is_pushing = true
+					statue.push(direction)
+					target_position = position + direction * tile_size
+					is_moving = true
+					ray_cast.global_position = global_position
+					return true
+	
+	ray_cast.global_position = global_position
+	return false
+	
+	#endregion
+	

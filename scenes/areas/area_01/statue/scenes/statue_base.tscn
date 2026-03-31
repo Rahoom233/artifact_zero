@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://dy5v74a6kddkc"]
 
-[node name="statue base" type="Node2D" unique_id=1916082588]
+[ext_resource type="Script" uid="uid://cxmkv5lgwlwei" path="res://scenes/areas/area_01/statue/scenes/statue_base.gd" id="1_x5j7w"]
+[ext_resource type="Texture2D" uid="uid://0nnoiwax2f63" path="res://assets/art/chambers/area 1 (3 keys)/statue/statues.png" id="2_mxlh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk4lo"]
+size = Vector2(7, 7)
+
+[node name="statue base" type="Node2D" unique_id=1916082588 groups=["statue and base"]]
+script = ExtResource("1_x5j7w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=548070086]
+texture = ExtResource("2_mxlh1")
+region_enabled = true
+region_rect = Rect2(8, 0, 8, 8)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=423136412]
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=996308776]
+shape = SubResource("RectangleShape2D_uk4lo")
