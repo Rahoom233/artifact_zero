@@ -26,10 +26,6 @@ Transition="*uid://cvaeh3ij5dxuw"
 
 window/stretch/mode="viewport"
 
-[global_group]
-
-"statue and base"=""
-
 [input]
 
 "Move left"={

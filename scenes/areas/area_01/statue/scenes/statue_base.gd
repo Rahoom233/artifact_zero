@@ -9,7 +9,9 @@ var occupied: bool = false
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var area: Area2D = $Area2D
+@onready var ray_cast: RayCast2D = $RayCast2D
 
+signal position_set
 
 func set_base(_color: int, _shape: int):
 	my_color = _color
@@ -29,3 +31,7 @@ func on_statue_placed():
 	# e.g., add a glow or a different tile
 	# For now, just disable further detection (optional)
 	area.monitoring = false
+
+func _set_position(pos: Vector2) -> void:
+	global_position = pos
+	pass

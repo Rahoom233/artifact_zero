@@ -8,11 +8,13 @@ var my_shape
 var on_base: bool # it means is sattue is on its base
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var ray_cast: RayCast2D = $RayCast2D
 
 
 @export var my_base: Statue_Base
+@export var my_num: int
 
-signal statue_placed
+signal position_set
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,10 +23,10 @@ func _ready() -> void:
 	set_sprite_texture()
 	if my_base is Statue_Base:
 		my_base.set_base(my_color, my_shape)
-	
 
-func _set_position() -> bool:
-	return true
+func _set_position(pos: Vector2) -> void:
+	global_position = pos
+	position_set.emit()
 
 func set_sprite_texture() -> void:
 	var shape_x = 0 if my_shape == shape.circle else 16
@@ -56,7 +58,6 @@ func place_on_base():
 	global_position = my_base.global_position
 	# Disable further movement (you'll need to handle this in your movement system)
 	# Emit signal so the base knows it's occupied
-	statue_placed.emit()
 	my_base.on_statue_placed()
 
 func push(direction: Vector2):
@@ -64,5 +65,4 @@ func push(direction: Vector2):
 		return
 	# Move statue by one tile (size 8)
 	global_position += direction * 8
-	
 	
