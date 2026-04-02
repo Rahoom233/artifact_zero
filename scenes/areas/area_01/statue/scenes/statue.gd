@@ -8,7 +8,6 @@ var my_shape
 var on_base: bool # it means is sattue is on its base
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
-@onready var ray_cast: RayCast2D = $RayCast2D
 
 
 @export var my_base: Statue_Base
@@ -32,6 +31,9 @@ func set_sprite_texture() -> void:
 	var shape_x = 0 if my_shape == shape.circle else 16
 	var color_y = my_color * 8
 	
+	if on_base:
+		shape_x = 48
+	
 	sprite_2d.region_enabled = true
 	sprite_2d.region_rect = Rect2(shape_x, color_y, 8, 8)
 
@@ -54,6 +56,7 @@ func _on_area_entered(area: Area2D) -> void:
 
 func place_on_base():
 	on_base = true
+	set_sprite_texture()
 	# Snap to base's position
 	global_position = my_base.global_position
 	# Disable further movement (you'll need to handle this in your movement system)

@@ -9,7 +9,6 @@ var occupied: bool = false
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var area: Area2D = $Area2D
-@onready var ray_cast: RayCast2D = $RayCast2D
 
 signal position_set
 
