@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c4j8fc85qdan8"]
+
+[ext_resource type="Texture2D" uid="uid://uq22tuxv3r71" path="res://assets/art/cyro mini/Cryo's Mini Items/Bottles/bottles.png" id="1_0dyf8"]
+[ext_resource type="Script" uid="uid://cusnhiv6g2hmu" path="res://resources/items/item.gd" id="1_qkphm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tggoy"]
+atlas = ExtResource("1_0dyf8")
+region = Rect2(0, 24, 8, 8)
+
+[resource]
+script = ExtResource("1_qkphm")
+id = "red_potion"
+name = "Red potion"
+icon = SubResource("AtlasTexture_tggoy")
+category = "general"
+metadata/_custom_type_script = "uid://cusnhiv6g2hmu"

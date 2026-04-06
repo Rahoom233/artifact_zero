@@ -5,7 +5,7 @@ extends Node
 var type_names = [
 	"empty",
 	"locked",
-	"boulder",
+	"statue",
 	"resource",
 	"mirror"
 	# Add more as you create them
@@ -17,7 +17,7 @@ var max_variations = {
 	1: {
 		0: 4,  # empty
 		1: 4,  # locked
-		#2: 2,  # statue
+		2: 1,  # statue
 		#3: 4,  # hollow
 		#4: 2,  # fountain
 	},
@@ -26,7 +26,7 @@ var max_variations = {
 
 # Per‑area weights: area_number -> { type_index: weight }
 var area_chamber_weights = {
-	1: {0: 50, 1: 50, 2: 0, 3: 0, 4: 0},
+	1: {0: 30, 1: 30, 2: 40, 3: 0, 4: 0},
 	# Add more areas later
 }
 
@@ -112,9 +112,9 @@ func advance_to_next_area():
 func update_room_on_player_luck() -> void:
 	if PlayerManager.player_luck_level >= 0:
 		area_chamber_weights = {
-			1: {0: 50, 1: 50, 2: 0, 3: 0, 4: 0},
+			1: {0: 40, 1: 40, 2: 20, 3: 0, 4: 0},
 		}
 	elif PlayerManager.player_luck_level >= 2:
 		area_chamber_weights = {
-			1: {0: 50, 1: 50, 2: 0, 3: 0, 4: 0},
+			1: {0: 30, 1: 30, 2: 40, 3: 0, 4: 0},
 		}

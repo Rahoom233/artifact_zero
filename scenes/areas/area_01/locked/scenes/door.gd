@@ -71,7 +71,6 @@ func set_initial_frame() -> void:
 	animated_sprite.frame = 0
 
 func delete_self() -> void:
-	print("deleted")
 	queue_free()
 
 func get_direction() -> String:

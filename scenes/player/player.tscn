@@ -161,6 +161,7 @@ animations = [{
 size = Vector2(8, 8)
 
 [node name="player" type="CharacterBody2D" unique_id=150489247 groups=["player"]]
+z_index = 1
 script = ExtResource("1_4ntmi")
 move_speed = 40.0
 
@@ -172,9 +173,10 @@ animation = &"idle_down"
 shape = SubResource("RectangleShape2D_8afob")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1470282400]
-zoom = Vector2(4, 4)
+zoom = Vector2(5, 5)
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1484061491]
 z_index = 1
+exclude_parent = false
 target_position = Vector2(0, 8)
 collide_with_areas = true

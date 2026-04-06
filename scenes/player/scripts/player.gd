@@ -104,8 +104,13 @@ func can_move(direction: Vector2) -> bool:
 		is_moving = true
 		return true
 	
-	#region raycast checking statue
 	var collider = ray_cast.get_collider()
+	
+	if collider is Level_changer:
+		is_moving = true
+		return true
+	
+		#region raycast checking statue
 	if collider is Area2D:
 		# It's a statue – see if we can push it
 		var statue = collider.get_parent()
