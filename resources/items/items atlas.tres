@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://ejna60qcgyh4"]
+
+[ext_resource type="Texture2D" uid="uid://c4byye5fjp18t" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Items.png" id="1_exmkl"]
+
+[resource]
+atlas = ExtResource("1_exmkl")

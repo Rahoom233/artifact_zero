@@ -12,9 +12,13 @@ var tile_size: int = 8
 #player movement variables
 var is_invincible: bool = false
 var is_pushing: bool = false
+#player inventory variables
+@export var inventory: InventoryData
+var inventory_visible: bool = false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast2D
+@onready var inventory_ui: Control = $"CanvasLayer/inventory ui"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -146,3 +150,12 @@ func can_move(direction: Vector2) -> bool:
 	
 	#endregion
 	
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("inventory"):
+		if inventory_visible:
+			inventory_ui.hide_ui()
+			inventory_visible = false
+		else:
+			inventory_ui.show_ui()
+			inventory_visible = true

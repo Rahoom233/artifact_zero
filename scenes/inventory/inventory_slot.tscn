@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cgso6yi5754xg"]
+
+[ext_resource type="Texture2D" uid="uid://c4byye5fjp18t" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Items.png" id="1_5agom"]
+[ext_resource type="Script" uid="uid://bp505hwlds35m" path="res://scenes/inventory/inventory_slot.gd" id="1_u6pog"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5agom"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34117648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6pog"]
+atlas = ExtResource("1_5agom")
+region = Rect2(0, 56, 8, 8)
+
+[node name="Inventory slot" type="Control" unique_id=1519410923 groups=["slot"]]
+clip_contents = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_u6pog")
+
+[node name="Panel" type="Panel" parent="." unique_id=90392532]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5agom")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1506906463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_u6pog")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=359022127]
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 14.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 10
+text = "9"
