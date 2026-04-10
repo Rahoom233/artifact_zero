@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ItemDataPotion" format=3 uid="uid://c2kjwlt1donwu"]
 
 [ext_resource type="Texture2D" uid="uid://uq22tuxv3r71" path="res://assets/art/cyro mini/Cryo's Mini Items/Bottles/bottles.png" id="1_gpc7x"]
-[ext_resource type="Script" uid="uid://cann87of6qnx0" path="res://resources/items/scripts/item types/item_data_potion.gd" id="1_n3ros"]
+[ext_resource type="Script" uid="uid://cann87of6qnx0" path="res://resources/inventory/scripts/item types/item_data_potion.gd" id="1_n3ros"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0pmu6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpc7x"]
 atlas = ExtResource("1_gpc7x")
 region = Rect2(0, 24, 8, 8)
 
@@ -13,7 +13,5 @@ effect_type = "health"
 effect_value = 5.0
 id = "red_potion_1"
 name = "Red potion"
-icon = SubResource("AtlasTexture_0pmu6")
-stackable = true
-max_stack = 4
+texture = SubResource("AtlasTexture_gpc7x")
 metadata/_custom_type_script = "uid://cann87of6qnx0"

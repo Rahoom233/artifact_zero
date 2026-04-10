@@ -10,7 +10,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0.34117648)
 atlas = ExtResource("1_5agom")
 region = Rect2(0, 56, 8, 8)
 
-[node name="Inventory slot" type="Control" unique_id=1519410923 groups=["slot"]]
+[node name="Inventory slot" type="Control" unique_id=1519410923 groups=["slots"]]
 clip_contents = true
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
@@ -40,6 +40,7 @@ texture = SubResource("AtlasTexture_u6pog")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=359022127]
+visible = false
 layout_mode = 1
 offset_right = 8.0
 offset_bottom = 14.0

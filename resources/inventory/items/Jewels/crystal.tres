@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataJewel" format=3 uid="uid://d3wjop1wvhc0y"]
+
+[ext_resource type="Script" uid="uid://cqovk4uce1vj7" path="res://resources/inventory/scripts/item types/item_data_jewel.gd" id="1_2t242"]
+[ext_resource type="Texture2D" uid="uid://bjh5ujjlk4gu5" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Gem_11.png" id="2_b22h1"]
+
+[resource]
+script = ExtResource("1_2t242")
+id = "crystal"
+name = "Craytak"
+texture = ExtResource("2_b22h1")
+stackable = true
+max_stack = 5
+metadata/_custom_type_script = "uid://cqovk4uce1vj7"

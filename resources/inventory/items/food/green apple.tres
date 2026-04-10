@@ -1,13 +1,14 @@
 [gd_resource type="Resource" script_class="ItemDataFood" format=3 uid="uid://bic3d56y6orfv"]
 
 [ext_resource type="Texture2D" uid="uid://ojxwvdlrqqhu" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Other_20.png" id="1_nl045"]
-[ext_resource type="Script" uid="uid://di5p21eunw8t0" path="res://resources/items/scripts/item types/item_data_food.gd" id="2_vsfef"]
+[ext_resource type="Script" uid="uid://di5p21eunw8t0" path="res://resources/inventory/scripts/item types/item_data_food.gd" id="2_vsfef"]
 
 [resource]
 script = ExtResource("2_vsfef")
+health_increase = 2
 id = "green_apple"
 name = "green apple"
-icon = ExtResource("1_nl045")
+texture = ExtResource("1_nl045")
 stackable = true
 max_stack = 16
 metadata/_custom_type_script = "uid://di5p21eunw8t0"

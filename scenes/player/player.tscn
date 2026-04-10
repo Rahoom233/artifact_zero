@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://3lyjhnexi85c" path="res://scenes/player/scripts/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://b7uca8flcp7ag" path="res://assets/art/player/player.png" id="1_8afob"]
-[ext_resource type="Resource" uid="uid://8lxvawddg7r1" path="res://resources/items/test inventory.tres" id="2_p47bc"]
+[ext_resource type="Resource" uid="uid://btg7k3udll5mb" path="res://resources/inventory/player inventorys/Jewel inventory.tres" id="2_0owmy"]
 [ext_resource type="Texture2D" uid="uid://b0bvc1moxq6on" path="res://assets/art/player/push animation.png" id="3_gmlin"]
+[ext_resource type="Resource" uid="uid://dgrk825nrwb1m" path="res://resources/inventory/player inventorys/Special inventory.tres" id="3_qek5x"]
+[ext_resource type="Resource" uid="uid://webvqelecaes" path="res://resources/inventory/player inventorys/Normal inventory.tres" id="4_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://b8hs3oc1v3xkg" path="res://scenes/inventory/inventory_ui.tscn" id="4_lvxji"]
+[ext_resource type="Resource" uid="uid://c34njd58s2vdw" path="res://resources/inventory/player inventorys/Gas canister slot.tres" id="5_qek5x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("1_8afob")
@@ -166,7 +169,10 @@ size = Vector2(8, 8)
 z_index = 1
 script = ExtResource("1_4ntmi")
 move_speed = 40.0
-inventory = ExtResource("2_p47bc")
+jewel_inventory = ExtResource("2_0owmy")
+special_inventory = ExtResource("3_qek5x")
+normal_inventory = ExtResource("4_5gtgg")
+gas_canister_slot = ExtResource("5_qek5x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=364799543]
 sprite_frames = SubResource("SpriteFrames_fcs02")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataJewel" format=3 uid="uid://dhra0xq1bkkrs"]
+
+[ext_resource type="Script" uid="uid://cqovk4uce1vj7" path="res://resources/inventory/scripts/item types/item_data_jewel.gd" id="1_ovqfw"]
+[ext_resource type="Texture2D" uid="uid://dhyddeng2rgek" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Gem_13.png" id="2_rsxs7"]
+
+[resource]
+script = ExtResource("1_ovqfw")
+id = "daimond"
+name = "Daimond"
+texture = ExtResource("2_rsxs7")
+stackable = true
+max_stack = 2
+metadata/_custom_type_script = "uid://cqovk4uce1vj7"

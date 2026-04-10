@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://8lxvawddg7r1"]
+
+[ext_resource type="Script" uid="uid://bon2hblketog4" path="res://resources/inventory/scripts/inventory_data.gd" id="1_mac0o"]
+[ext_resource type="Script" uid="uid://cr5i01k5c1swj" path="res://resources/inventory/scripts/slot_data.gd" id="2_hj6b1"]
+[ext_resource type="Resource" uid="uid://c2kjwlt1donwu" path="res://resources/inventory/items/potions/red potion.tres" id="3_clkpf"]
+[ext_resource type="Resource" uid="uid://bic3d56y6orfv" path="res://resources/inventory/items/food/green apple.tres" id="4_clkpf"]
+[ext_resource type="Resource" uid="uid://8c30f7adjpxs" path="res://resources/inventory/items/food/orange.tres" id="5_0trow"]
+
+[sub_resource type="Resource" id="Resource_0trow"]
+script = ExtResource("2_hj6b1")
+item_data = ExtResource("3_clkpf")
+potion_allowed = true
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
+[sub_resource type="Resource" id="Resource_xwany"]
+script = ExtResource("2_hj6b1")
+item_data = ExtResource("4_clkpf")
+quantity = 6
+food_allowed = true
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
+[sub_resource type="Resource" id="Resource_ya7u3"]
+script = ExtResource("2_hj6b1")
+item_data = ExtResource("3_clkpf")
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
+[sub_resource type="Resource" id="Resource_s5uo2"]
+script = ExtResource("2_hj6b1")
+item_data = ExtResource("5_0trow")
+quantity = 4
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
+[resource]
+script = ExtResource("1_mac0o")
+slot_datas = Array[ExtResource("2_hj6b1")]([SubResource("Resource_0trow"), SubResource("Resource_xwany"), SubResource("Resource_ya7u3"), null, SubResource("Resource_s5uo2"), null, null, null])
+metadata/_custom_type_script = "uid://bon2hblketog4"

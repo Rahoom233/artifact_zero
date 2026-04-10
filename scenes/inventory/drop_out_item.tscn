@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ba4456l1mj72x"]
+
+[ext_resource type="Script" uid="uid://c6sd50wyd0tas" path="res://scenes/inventory/drop_out_item.gd" id="1_hu1w5"]
+[ext_resource type="Resource" uid="uid://dhra0xq1bkkrs" path="res://resources/inventory/items/Jewels/daimond.tres" id="2_hu1w5"]
+[ext_resource type="Texture2D" uid="uid://64le77vikor5" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Other_4.png" id="3_roxqp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_roxqp"]
+radius = 8.0
+
+[node name="drop out item" type="Area2D" unique_id=1808814732]
+script = ExtResource("1_hu1w5")
+item_data = ExtResource("2_hu1w5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1676573216]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_roxqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=637713192]
+shape = SubResource("CircleShape2D_roxqp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

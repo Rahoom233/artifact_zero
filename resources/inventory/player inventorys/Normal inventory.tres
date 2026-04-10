@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://webvqelecaes"]
+
+[ext_resource type="Script" uid="uid://bon2hblketog4" path="res://resources/inventory/scripts/inventory_data.gd" id="1_6gryw"]
+[ext_resource type="Script" uid="uid://cr5i01k5c1swj" path="res://resources/inventory/scripts/slot_data.gd" id="2_prcu7"]
+[ext_resource type="Resource" uid="uid://8c30f7adjpxs" path="res://resources/inventory/items/food/orange.tres" id="3_1hjyy"]
+[ext_resource type="Resource" uid="uid://bic3d56y6orfv" path="res://resources/inventory/items/food/green apple.tres" id="4_j1vxo"]
+
+[sub_resource type="Resource" id="Resource_b2af5"]
+script = ExtResource("2_prcu7")
+item_data = ExtResource("4_j1vxo")
+quantity = 12
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
+[sub_resource type="Resource" id="Resource_p5jxr"]
+script = ExtResource("2_prcu7")
+item_data = ExtResource("3_1hjyy")
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
+[resource]
+script = ExtResource("1_6gryw")
+slot_datas = Array[ExtResource("2_prcu7")]([null, SubResource("Resource_b2af5"), null, SubResource("Resource_p5jxr"), null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://bon2hblketog4"

@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://boh8ea6h48707" path="res://scenes/level changer/level_changer.tscn" id="3_kjqox"]
 [ext_resource type="PackedScene" uid="uid://dofebc80f4kus" path="res://scenes/player/player_start_position.tscn" id="4_5x15g"]
 [ext_resource type="PackedScene" uid="uid://1evc5e6esnvm" path="res://scenes/player/player.tscn" id="5_tcgbi"]
-[ext_resource type="Resource" uid="uid://8lxvawddg7r1" path="res://resources/items/test inventory.tres" id="6_0dqwy"]
+[ext_resource type="PackedScene" uid="uid://ba4456l1mj72x" path="res://scenes/inventory/drop_out_item.tscn" id="6_0dqwy"]
+[ext_resource type="Resource" uid="uid://bic3d56y6orfv" path="res://resources/inventory/items/food/green apple.tres" id="7_2sg3y"]
+[ext_resource type="Resource" uid="uid://c2kjwlt1donwu" path="res://resources/inventory/items/potions/red potion.tres" id="7_msjq7"]
+[ext_resource type="Resource" uid="uid://d3wjop1wvhc0y" path="res://resources/inventory/items/Jewels/crystal.tres" id="7_olcs3"]
 
 [node name="1" type="Node2D" unique_id=47420351]
 script = ExtResource("1_6xb12")
@@ -50,4 +53,25 @@ position = Vector2(12, -12)
 current_position = "Up"
 
 [node name="player" parent="." unique_id=150489247 instance=ExtResource("5_tcgbi")]
-inventory = ExtResource("6_0dqwy")
+
+[node name="drop out item" parent="." unique_id=1808814732 instance=ExtResource("6_0dqwy")]
+position = Vector2(24, 24)
+
+[node name="drop out item3" parent="." unique_id=945623624 instance=ExtResource("6_0dqwy")]
+position = Vector2(48, 0)
+
+[node name="drop out item2" parent="." unique_id=1326190368 instance=ExtResource("6_0dqwy")]
+position = Vector2(-16, 20)
+item_data = ExtResource("7_msjq7")
+
+[node name="drop out item6" parent="." unique_id=1813059402 instance=ExtResource("6_0dqwy")]
+position = Vector2(-20, 4)
+item_data = ExtResource("7_msjq7")
+
+[node name="drop out item5" parent="." unique_id=1582577663 instance=ExtResource("6_0dqwy")]
+position = Vector2(36, 44)
+item_data = ExtResource("7_2sg3y")
+
+[node name="drop out item4" parent="." unique_id=1923430737 instance=ExtResource("6_0dqwy")]
+position = Vector2(-32, 40)
+item_data = ExtResource("7_olcs3")

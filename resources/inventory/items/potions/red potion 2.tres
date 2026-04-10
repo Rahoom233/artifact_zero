@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemDataPotion" format=3 uid="uid://d161xt3cn3q4v"]
 
 [ext_resource type="Texture2D" uid="uid://uq22tuxv3r71" path="res://assets/art/cyro mini/Cryo's Mini Items/Bottles/bottles.png" id="1_vxwld"]
-[ext_resource type="Script" uid="uid://cann87of6qnx0" path="res://resources/items/scripts/item types/item_data_potion.gd" id="1_wchp2"]
+[ext_resource type="Script" uid="uid://cann87of6qnx0" path="res://resources/inventory/scripts/item types/item_data_potion.gd" id="1_wchp2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8tm4x"]
 atlas = ExtResource("1_vxwld")

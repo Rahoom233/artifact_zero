@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDataFood" format=3 uid="uid://8c30f7adjpxs"]
+
+[ext_resource type="Script" uid="uid://di5p21eunw8t0" path="res://resources/inventory/scripts/item types/item_data_food.gd" id="1_mshau"]
+[ext_resource type="Texture2D" uid="uid://64le77vikor5" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Other_4.png" id="2_5jttw"]
+
+[resource]
+script = ExtResource("1_mshau")
+health_increase = 4
+id = "orange"
+name = "Orange"
+texture = ExtResource("2_5jttw")
+stackable = true
+max_stack = 16
+metadata/_custom_type_script = "uid://di5p21eunw8t0"

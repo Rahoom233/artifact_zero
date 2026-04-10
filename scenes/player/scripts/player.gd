@@ -13,12 +13,15 @@ var tile_size: int = 8
 var is_invincible: bool = false
 var is_pushing: bool = false
 #player inventory variables
-@export var inventory: InventoryData
+@export var jewel_inventory: InventoryData
+@export var special_inventory: InventoryData
+@export var normal_inventory: InventoryData
+@export var gas_canister_slot: SlotData
 var inventory_visible: bool = false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast2D
-@onready var inventory_ui: Control = $"CanvasLayer/inventory ui"
+@onready var inventory_ui: InventoryUi = $"CanvasLayer/inventory ui"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,12 +29,13 @@ func _ready() -> void:
 	current_direction = PlayerManager.saved_player_direction
 	update_animaton()
 	target_position = position
+	
+	inventory_ui.update_jewel_slot_datas(jewel_inventory.slot_datas)
+	inventory_ui.update_special_slot_datas(special_inventory.slot_datas)
+	inventory_ui.update_normal_slot_datas(normal_inventory.slot_datas)
 
 func _process(_delta: float) -> void:
-	
-	var _object = ray_cast.get_collider()
-	
-
+	pass
 
 func _physics_process(delta):
 	handle_input()
@@ -149,7 +153,6 @@ func can_move(direction: Vector2) -> bool:
 	return false
 	
 	#endregion
-	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("inventory"):

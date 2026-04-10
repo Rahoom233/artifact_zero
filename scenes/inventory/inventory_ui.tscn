@@ -143,6 +143,18 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="mini screen elements" type="Control" parent="." unique_id=376832732]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="mini screen elements" unique_id=1363698152]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 129.0
+offset_right = 601.0
+offset_bottom = 299.0
+
 [node name="jewel slots" type="Control" parent="." unique_id=1049615878]
 layout_mode = 1
 anchors_preset = 1
@@ -160,6 +172,7 @@ offset_left = 20.0
 offset_top = 20.0
 offset_right = 60.0
 offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot2" parent="jewel slots" unique_id=54146036 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -167,6 +180,7 @@ offset_left = 80.0
 offset_top = 20.0
 offset_right = 120.0
 offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot3" parent="jewel slots" unique_id=1640486907 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -174,6 +188,7 @@ offset_left = 140.0
 offset_top = 20.0
 offset_right = 180.0
 offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot4" parent="jewel slots" unique_id=870288412 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -181,6 +196,7 @@ offset_left = 200.0
 offset_top = 20.0
 offset_right = 240.0
 offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot5" parent="jewel slots" unique_id=531313026 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -188,6 +204,7 @@ offset_left = 20.0
 offset_top = 80.0
 offset_right = 60.0
 offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot6" parent="jewel slots" unique_id=736872505 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -195,6 +212,7 @@ offset_left = 80.0
 offset_top = 80.0
 offset_right = 120.0
 offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot7" parent="jewel slots" unique_id=1552542116 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -202,6 +220,7 @@ offset_left = 140.0
 offset_top = 80.0
 offset_right = 180.0
 offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataJewel"])
 
 [node name="jewel slot8" parent="jewel slots" unique_id=164902403 instance=ExtResource("3_8ojme")]
 layout_mode = 0
@@ -209,6 +228,186 @@ offset_left = 200.0
 offset_top = 80.0
 offset_right = 240.0
 offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataJewel"])
+
+[node name="special item slots" type="Control" parent="." unique_id=2012922156]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -516.0
+offset_top = 374.0
+offset_right = -256.0
+offset_bottom = 513.99976
+grow_horizontal = 0
+
+[node name="special slots" parent="special item slots" unique_id=346027268 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots2" parent="special item slots" unique_id=1160863068 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots3" parent="special item slots" unique_id=262446995 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots4" parent="special item slots" unique_id=2056345696 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots5" parent="special item slots" unique_id=279543930 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 60.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots6" parent="special item slots" unique_id=364970892 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 120.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots7" parent="special item slots" unique_id=2119561011 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 80.0
+offset_right = 180.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="special slots8" parent="special item slots" unique_id=639990199 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataPotion"])
+
+[node name="normal slots" type="Control" parent="." unique_id=359681486]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1016.0
+offset_top = 394.0
+offset_right = -696.0
+offset_bottom = 533.99976
+grow_horizontal = 0
+
+[node name="normal slots" parent="normal slots" unique_id=2062735294 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots2" parent="normal slots" unique_id=114601494 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots3" parent="normal slots" unique_id=1903536326 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots4" parent="normal slots" unique_id=2024095529 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots10" parent="normal slots" unique_id=1767727382 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 60.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots5" parent="normal slots" unique_id=499827553 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 60.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots6" parent="normal slots" unique_id=695192297 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 120.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots7" parent="normal slots" unique_id=323434369 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 80.0
+offset_right = 180.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots8" parent="normal slots" unique_id=1668944463 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="normal slots9" parent="normal slots" unique_id=470784883 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 80.0
+offset_right = 300.0
+offset_bottom = 120.0
+allowed_types = Array[String](["ItemDataFood"])
+
+[node name="cylinder slot" type="Control" parent="." unique_id=922279419]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 136.0
+offset_top = 194.0
+offset_right = 176.0
+offset_bottom = 234.0
+
+[node name="cylinder slot" parent="cylinder slot" unique_id=1521640537 instance=ExtResource("3_8ojme")]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=346965874]
 libraries/ = SubResource("AnimationLibrary_mme0t")

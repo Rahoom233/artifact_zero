@@ -12,10 +12,13 @@ var player: Player
 var player_luck_level: int = clampi(0,0,10)
 
 var player_inventory: InventoryData
-var player_inventory_showing: bool = false
 
 func _ready() -> void:
+	var current_player = get_tree().get_first_node_in_group("player")
+	player = current_player
 	pass
+
+
 
 func save_player_direction() -> void:
 	var current_player = get_tree().get_first_node_in_group("player")
@@ -34,12 +37,9 @@ func save_player_inventory() -> void:
 	player_inventory = player.inventory
 
 func _unhandled_input(event: InputEvent) -> void:
-	if get_node_or_null("/root/1/player/CanvasLayer/inventory ui"):
-		#print(get_node_or_null("/root/1/player/CanvasLayer/inventory ui"))
-		return
-	
-	if event.is_action_pressed("inventory"):
-		if player.inventory_ui.visible:
-			get_tree().paused = false
-		else:
-			get_tree().paused = true
+	pass
+	#if event.is_action_pressed("inventory"):
+		#if player.inventory_visible:
+		#	get_tree().paused = true
+		#else:
+			#get_tree().paused = false
