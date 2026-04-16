@@ -16,13 +16,14 @@ var is_pushing: bool = false
 @export var jewel_inventory: InventoryData
 @export var special_inventory: InventoryData
 @export var normal_inventory: InventoryData
-@export var gas_canister_slot: SlotData
+@export var cylinder_slot: SlotData
 var inventory_visible: bool = false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast2D
 @onready var inventory_ui: InventoryUi = $"CanvasLayer/inventory ui"
 @onready var status_ui: Control = $"CanvasLayer/player status ui"
+@onready var health_oxygen_manager: HealthOxygenManager = $"health and oxygen manager"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,6 +36,7 @@ func _ready() -> void:
 	inventory_ui.update_jewel_slot_datas(jewel_inventory.slot_datas)
 	inventory_ui.update_special_slot_datas(special_inventory.slot_datas)
 	inventory_ui.update_normal_slot_datas(normal_inventory.slot_datas)
+	inventory_ui.update_cylinder_slot_datas(cylinder_slot)
 
 func _process(_delta: float) -> void:
 	pass

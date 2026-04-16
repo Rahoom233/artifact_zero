@@ -63,8 +63,9 @@ func update_normal_slot_datas(slot_datas: Array[SlotData]) -> void:
 			else:
 				slot.clear_slot_item()
 
-func update_cylinder_slot_datas(slot_datas: Array[SlotData]) -> void:
-	pass
+func update_cylinder_slot_datas(slot_data: SlotData) -> void:
+	if slot_data:
+		cylinder_slot.add_slot_item(slot_data)
 
 #endregion
 

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDataCylinder" format=3 uid="uid://malsb0q711hj"]
+
+[ext_resource type="Script" uid="uid://dnrugq44suaiw" path="res://resources/inventory/scripts/item types/item_data_cylinder.gd" id="1_p1tau"]
+[ext_resource type="Texture2D" uid="uid://c6em7rylfhfv5" path="res://assets/art/items/cylinders/cylinders.png" id="2_ut1p5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjaxw"]
+atlas = ExtResource("2_ut1p5")
+region = Rect2(16, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_p1tau")
+max_capacity = 120
+remaining_capacity = 120
+rarity = "common"
+id = "green cylinder"
+name = "green cylinder"
+texture = SubResource("AtlasTexture_bjaxw")
+metadata/_custom_type_script = "uid://dnrugq44suaiw"

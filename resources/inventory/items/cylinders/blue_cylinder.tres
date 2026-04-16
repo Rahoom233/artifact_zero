@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDataCylinder" format=3 uid="uid://c8rrpmxae3imt"]
+
+[ext_resource type="Script" uid="uid://dnrugq44suaiw" path="res://resources/inventory/scripts/item types/item_data_cylinder.gd" id="1_wk21e"]
+[ext_resource type="Texture2D" uid="uid://c6em7rylfhfv5" path="res://assets/art/items/cylinders/cylinders.png" id="2_rym74"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjaxw"]
+atlas = ExtResource("2_rym74")
+region = Rect2(32, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_wk21e")
+max_capacity = 150
+remaining_capacity = 150
+rarity = "uncommon"
+id = "blue cylinder"
+name = "blue cylinder"
+texture = SubResource("AtlasTexture_bjaxw")
+metadata/_custom_type_script = "uid://dnrugq44suaiw"

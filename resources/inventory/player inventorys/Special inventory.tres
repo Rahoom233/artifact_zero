@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bon2hblketog4" path="res://resources/inventory/scripts/inventory_data.gd" id="1_j7184"]
 [ext_resource type="Script" uid="uid://cr5i01k5c1swj" path="res://resources/inventory/scripts/slot_data.gd" id="2_js5p6"]
 [ext_resource type="Resource" uid="uid://c2kjwlt1donwu" path="res://resources/inventory/items/potions/red potion.tres" id="3_uu1u0"]
+[ext_resource type="Resource" uid="uid://c8rrpmxae3imt" path="res://resources/inventory/items/cylinders/blue_cylinder.tres" id="4_js5p6"]
 
 [sub_resource type="Resource" id="Resource_23qtt"]
 script = ExtResource("2_js5p6")
@@ -14,7 +15,12 @@ script = ExtResource("2_js5p6")
 item_data = ExtResource("3_uu1u0")
 metadata/_custom_type_script = "uid://cr5i01k5c1swj"
 
+[sub_resource type="Resource" id="Resource_uu1u0"]
+script = ExtResource("2_js5p6")
+item_data = ExtResource("4_js5p6")
+metadata/_custom_type_script = "uid://cr5i01k5c1swj"
+
 [resource]
 script = ExtResource("1_j7184")
-slot_datas = Array[ExtResource("2_js5p6")]([SubResource("Resource_23qtt"), SubResource("Resource_0hbu8"), null, null, null, null, null, null])
+slot_datas = Array[ExtResource("2_js5p6")]([SubResource("Resource_23qtt"), SubResource("Resource_0hbu8"), null, SubResource("Resource_uu1u0"), null, null, null, null])
 metadata/_custom_type_script = "uid://bon2hblketog4"
