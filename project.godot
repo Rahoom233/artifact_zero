@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 
 PlayerManager="*uid://d0h3kvuiqry4p"
 LevelManager="*uid://xcryvk1jhrnb"
-Transition="*uid://cvaeh3ij5dxuw"
+Transition="*uid://bgn621pnqev8r"
 PlayerInventoryManager="*uid://b65xhfpkv4h74"
 
 [display]

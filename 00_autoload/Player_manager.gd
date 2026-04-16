@@ -25,7 +25,6 @@ func save_player_direction() -> void:
 	player = current_player
 	if current_player:
 		saved_player_direction = current_player.current_direction
-		save_player_inventory()
 
 func update_player_luck(value: int, uder_value: int) -> void:
 	#if the value is less that under_value then it will work
@@ -33,8 +32,6 @@ func update_player_luck(value: int, uder_value: int) -> void:
 	if value <= uder_value: 
 		player_luck_level += value
 
-func save_player_inventory() -> void:
-	player_inventory = player.inventory
 
 func _unhandled_input(event: InputEvent) -> void:
 	pass

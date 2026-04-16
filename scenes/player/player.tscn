@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://webvqelecaes" path="res://resources/inventory/player inventorys/Normal inventory.tres" id="4_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://b8hs3oc1v3xkg" path="res://scenes/inventory/inventory_ui.tscn" id="4_lvxji"]
 [ext_resource type="Resource" uid="uid://c34njd58s2vdw" path="res://resources/inventory/player inventorys/Gas canister slot.tres" id="5_qek5x"]
+[ext_resource type="PackedScene" uid="uid://bvb1dp8j5r1lh" path="res://scenes/player health ui/player_status_ui.tscn" id="9_5gtgg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("1_8afob")
@@ -190,7 +191,10 @@ exclude_parent = false
 target_position = Vector2(0, 8)
 collide_with_areas = true
 
+[node name="health and oxegyn manager" type="Node2D" parent="." unique_id=1155229690]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1744087837]
 
 [node name="inventory ui" parent="CanvasLayer" unique_id=1106080643 instance=ExtResource("4_lvxji")]
-visible = false
+
+[node name="player status ui" parent="CanvasLayer" unique_id=791231009 instance=ExtResource("9_5gtgg")]

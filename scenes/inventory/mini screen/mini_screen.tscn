@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b2flukc4voobt"]
+
+[ext_resource type="Script" uid="uid://buvfgwpo2secb" path="res://scenes/inventory/mini screen/mini_screen.gd" id="1_0spxc"]
+[ext_resource type="Texture2D" uid="uid://dhyddeng2rgek" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Gem_13.png" id="1_pbp0p"]
+
+[node name="mini screen element" type="Control" unique_id=1725283152]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 192.0
+offset_bottom = 192.0
+script = ExtResource("1_0spxc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1067051429]
+visible = false
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 192.0
+
+[node name="item info" type="Control" parent="." unique_id=1419168145]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="item info" unique_id=391533918]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pbp0p")
+expand_mode = 1
+
+[node name="name" type="Label" parent="item info" unique_id=1157849199]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 150.0
+offset_right = 60.0
+offset_bottom = 173.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Name: "
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1638562315]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=246959083]
+layout_mode = 2

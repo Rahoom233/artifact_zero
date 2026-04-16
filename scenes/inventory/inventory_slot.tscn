@@ -11,16 +11,16 @@ atlas = ExtResource("1_5agom")
 region = Rect2(0, 56, 8, 8)
 
 [node name="Inventory slot" type="Control" unique_id=1519410923 groups=["slots"]]
-clip_contents = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 32.0
-offset_bottom = 32.0
+offset_right = 48.0
+offset_bottom = 48.0
+mouse_behavior_recursive = 2
 script = ExtResource("1_u6pog")
 
-[node name="Panel" type="Panel" parent="." unique_id=90392532]
-custom_minimum_size = Vector2(8, 8)
+[node name="Panel" type="PanelContainer" parent="." unique_id=1465452835]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,12 +30,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5agom")
 
 [node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1506906463]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 texture = SubResource("AtlasTexture_u6pog")
 expand_mode = 1
 
@@ -49,3 +44,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 10
 text = "9"
+
+[connection signal="mouse_entered" from="Panel" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="." method="_on_mouse_exited"]

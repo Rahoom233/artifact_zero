@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cvaeh3ij5dxuw" path="res://scenes/transitions/transition.gd" id="1_543wv"]
 
-[sub_resource type="Animation" id="Animation_hbnve"]
+[sub_resource type="Animation" id="Animation_ninup"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -17,13 +17,13 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ninup"]
+[sub_resource type="Animation" id="Animation_vt3ac"]
 resource_name = "fade_in"
 length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -33,13 +33,13 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_vt3ac"]
+[sub_resource type="Animation" id="Animation_qnqc6"]
 resource_name = "fade_out"
 length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -49,26 +49,18 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vt3ac"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6nur"]
 _data = {
-&"RESET": SubResource("Animation_hbnve"),
-&"fade_in": SubResource("Animation_ninup"),
-&"fade_out": SubResource("Animation_vt3ac")
+&"RESET": SubResource("Animation_ninup"),
+&"fade_in": SubResource("Animation_vt3ac"),
+&"fade_out": SubResource("Animation_qnqc6")
 }
 
-[node name="transition" type="CanvasLayer" unique_id=1730590800]
+[node name="transition" type="CanvasLayer" unique_id=1787026399]
+process_mode = 3
 script = ExtResource("1_543wv")
 
-[node name="Control" type="Control" parent="." unique_id=1925026108]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1179599928]
-layout_mode = 1
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1576751911]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -76,5 +68,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=569625399]
-libraries/ = SubResource("AnimationLibrary_vt3ac")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=702700418]
+libraries/ = SubResource("AnimationLibrary_t6nur")

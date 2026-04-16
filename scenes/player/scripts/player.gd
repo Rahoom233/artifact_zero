@@ -22,6 +22,7 @@ var inventory_visible: bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast: RayCast2D = $RayCast2D
 @onready var inventory_ui: InventoryUi = $"CanvasLayer/inventory ui"
+@onready var status_ui: Control = $"CanvasLayer/player status ui"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,6 +30,7 @@ func _ready() -> void:
 	current_direction = PlayerManager.saved_player_direction
 	update_animaton()
 	target_position = position
+	inventory_ui.hide_ui()
 	
 	inventory_ui.update_jewel_slot_datas(jewel_inventory.slot_datas)
 	inventory_ui.update_special_slot_datas(special_inventory.slot_datas)
@@ -159,6 +161,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if inventory_visible:
 			inventory_ui.hide_ui()
 			inventory_visible = false
+			status_ui.visible = true
 		else:
 			inventory_ui.show_ui()
 			inventory_visible = true
+			status_ui.visible = false

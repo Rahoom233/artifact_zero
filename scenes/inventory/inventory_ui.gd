@@ -4,6 +4,7 @@ class_name InventoryUi
 @export var test_inv: InventoryData
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var mini_screen: MiniInventoryScreen = $"mini screen"
 
 var jewel_slots: Array
 var special_slots: Array
@@ -19,7 +20,8 @@ func _ready() -> void:
 	jewel_slots = $"jewel slots".get_children()
 	special_slots = $"special item slots".get_children()
 	normal_slots = $"normal slots".get_children()
-	cylender_slot = $"cylinder slot/cylinder slot"
+	cylinder_slot = $"cylinder slots/cylinder slot"
+
 	
 	
 
@@ -32,6 +34,7 @@ func hide_ui() -> void:
 	await animation_player.animation_finished
 	visible = false
 
+#region update visual for all slot
 # inventory_ui.gd
 func update_jewel_slot_datas(slot_datas: Array[SlotData]) -> void:
 	for i in range(slot_datas.size()):
@@ -61,4 +64,12 @@ func update_normal_slot_datas(slot_datas: Array[SlotData]) -> void:
 				slot.clear_slot_item()
 
 func update_cylinder_slot_datas(slot_datas: Array[SlotData]) -> void:
-	
+	pass
+
+#endregion
+
+func update_info_screen(_data: ItemData, visibile: bool) -> void:
+	if visibile:
+		mini_screen.show_item_info(_data)
+	else:
+		mini_screen.hide_item_info(_data)

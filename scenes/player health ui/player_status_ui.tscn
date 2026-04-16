@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bvb1dp8j5r1lh"]
+
+[ext_resource type="Script" uid="uid://byqacisqp6rl7" path="res://scenes/player health ui/player_status_ui.gd" id="1_ermrb"]
+[ext_resource type="Texture2D" uid="uid://doorgj7ej83ms" path="res://assets/art/ui/inventory ui/player mini.png" id="1_okykd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ermrb"]
+bg_color = Color(0.6, 0.6, 0.6, 0.49019608)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ermrb"]
+atlas = ExtResource("1_okykd")
+region = Rect2(52, 0, 6, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csfo7"]
+atlas = ExtResource("1_okykd")
+region = Rect2(58, 0, 6, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okykd"]
+atlas = ExtResource("1_okykd")
+region = Rect2(0, 0, 40, 64)
+
+[node name="player status ui" type="Control" unique_id=791231009]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ermrb")
+
+[node name="Panel" type="Panel" parent="." unique_id=95719938]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -256.0
+offset_right = 192.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ermrb")
+
+[node name="health bar" type="TextureProgressBar" parent="Panel" unique_id=637021395]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -196.0
+offset_right = 44.0
+offset_bottom = -96.0
+grow_vertical = 0
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = SubResource("AtlasTexture_ermrb")
+
+[node name="gas bar" type="TextureProgressBar" parent="Panel" unique_id=1381696706]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = -196.0
+offset_right = 76.0
+offset_bottom = -96.0
+grow_vertical = 0
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = SubResource("AtlasTexture_csfo7")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=612939328]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_okykd")
+stretch_mode = 4

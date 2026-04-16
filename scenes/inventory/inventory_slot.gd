@@ -2,6 +2,7 @@ extends Control
 class_name InventorySlot
 
 var item_data: ItemData
+var inventory_ui: InventoryUi
 
 @export var allowed_types: Array[String] = []  # e.g., ["ItemDataJewel"]
 @onready var label: Label = $Label
@@ -9,7 +10,7 @@ var item_data: ItemData
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	inventory_ui = get_tree().get_first_node_in_group("inventory ui")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,8 +20,8 @@ func clear_slot_item() -> void:
 	item_data = null
 
 func add_slot_item(_data: SlotData) -> void:
-	var item = _data.item_data
-	texture_rect.texture = item.texture
+	item_data = _data.item_data
+	texture_rect.texture = item_data.texture
 	
 	if _data.quantity > 1:
 		label.text = str(_data.quantity)
@@ -36,3 +37,12 @@ func can_accept_item(item: ItemData) -> bool:
 	if allowed_types.is_empty():
 		return true
 	return item.get_script().get_global_name() in allowed_types
+
+
+func _on_mouse_entered() -> void:
+	if item_data:
+		inventory_ui.update_info_screen(item_data, true)
+
+
+func _on_mouse_exited() -> void:
+		inventory_ui.update_info_screen(item_data, false)
