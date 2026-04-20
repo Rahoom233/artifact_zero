@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bus2i2fd5fy48"]
+
+[ext_resource type="Texture2D" uid="uid://s1nry3fshbd2" path="res://assets/art/ui/inventory ui/cylinder ui.png" id="1_vfex6"]
+[ext_resource type="Texture2D" uid="uid://bw5pp8m7fiwre" path="res://assets/art/ui/inventory ui/cylinder niddle.png" id="2_6inli"]
+[ext_resource type="Script" uid="uid://mrael4xrhym0" path="res://scenes/inventory/cylinder screen/cylinder_screen.gd" id="2_ljm4r"]
+[ext_resource type="Resource" uid="uid://c34njd58s2vdw" path="res://resources/inventory/player inventorys/Gas canister slot.tres" id="3_te3l7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpiwh"]
+atlas = ExtResource("1_vfex6")
+region = Rect2(13, 0, 78, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd14t"]
+atlas = ExtResource("1_vfex6")
+region = Rect2(0, 50, 12, 170)
+
+[node name="cylinder screen" type="TextureRect" unique_id=1565137053]
+offset_right = 78.0
+offset_bottom = 224.0
+texture = SubResource("AtlasTexture_vpiwh")
+stretch_mode = 2
+script = ExtResource("2_ljm4r")
+cylinder_slot = ExtResource("3_te3l7")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=452571064]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 24.0
+offset_right = 35.0
+offset_bottom = 40.0
+pivot_offset = Vector2(16, 0)
+texture = ExtResource("2_6inli")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1776263587]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 50.0
+offset_right = 51.0
+offset_bottom = 220.0
+value = 20.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = SubResource("AtlasTexture_bd14t")

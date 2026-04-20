@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d0hyvia88k57p" path="res://assets/art/ui/inventory ui/main.png" id="2_mme0t"]
 [ext_resource type="PackedScene" uid="uid://cgso6yi5754xg" path="res://scenes/inventory/inventory_slot.tscn" id="3_8ojme"]
 [ext_resource type="PackedScene" uid="uid://b2flukc4voobt" path="res://scenes/inventory/mini screen/mini_screen.tscn" id="3_mme0t"]
+[ext_resource type="PackedScene" uid="uid://bus2i2fd5fy48" path="res://scenes/inventory/cylinder screen/cylinder_screen.tscn" id="5_iy21j"]
 
 [sub_resource type="Animation" id="Animation_qedko"]
 length = 0.001
@@ -173,7 +174,7 @@ texture = ExtResource("2_mme0t")
 expand_mode = 1
 
 [node name="mini screen" parent="." unique_id=1725283152 instance=ExtResource("3_mme0t")]
-layout_mode = 1
+layout_mode = 0
 offset_left = 384.0
 offset_top = 92.0
 offset_right = 384.0
@@ -438,3 +439,10 @@ offset_bottom = 58.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=346965874]
 libraries/ = SubResource("AnimationLibrary_mme0t")
+
+[node name="cylinder screen" parent="." unique_id=1565137053 instance=ExtResource("5_iy21j")]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 92.0
+offset_right = 235.0
+offset_bottom = 316.0

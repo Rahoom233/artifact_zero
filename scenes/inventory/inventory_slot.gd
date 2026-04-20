@@ -46,3 +46,8 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 		inventory_ui.update_info_screen(item_data, false)
+
+
+func _on_button_pressed() -> void:
+	if item_data:
+		inventory_ui.toggle_interact_for_item(item_data)

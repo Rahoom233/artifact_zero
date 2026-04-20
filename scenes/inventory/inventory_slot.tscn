@@ -27,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_5agom")
 
 [node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1506906463]
@@ -45,5 +46,16 @@ theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 10
 text = "9"
 
-[connection signal="mouse_entered" from="Panel" to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Panel" to="." method="_on_mouse_exited"]
+[node name="Button" type="Button" parent="." unique_id=309456667]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+flat = true
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

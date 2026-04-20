@@ -74,12 +74,12 @@ my_base = NodePath("../../statue base/statue base4")
 my_num = 4
 
 [node name="statue5" parent="statue" unique_id=724457015 node_paths=PackedStringArray("my_base") instance=ExtResource("5_hbnkk")]
-position = Vector2(-28, 4)
+position = Vector2(-36, -4)
 my_base = NodePath("../../statue base/statue base5")
 my_num = 4
 
 [node name="statue6" parent="statue" unique_id=1944860690 node_paths=PackedStringArray("my_base") instance=ExtResource("5_hbnkk")]
-position = Vector2(-28, 4)
+position = Vector2(-36, 4)
 my_base = NodePath("../../statue base/statue base6")
 my_num = 4
 
@@ -98,10 +98,10 @@ position = Vector2(-28, 20)
 position = Vector2(-20, 20)
 
 [node name="statue base5" parent="statue base" unique_id=1031059598 instance=ExtResource("6_arujc")]
-position = Vector2(-20, 20)
+position = Vector2(-36, 12)
 
 [node name="statue base6" parent="statue base" unique_id=508476625 instance=ExtResource("6_arujc")]
-position = Vector2(-20, 20)
+position = Vector2(-36, 20)
 
 [node name="boulders" type="Node" parent="." unique_id=463830493]
 

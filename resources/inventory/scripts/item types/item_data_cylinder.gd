@@ -21,4 +21,4 @@ func is_empty() -> bool:
 	return remaining_capacity <= 0
 
 func get_percentage() -> float:
-	return float(remaining_capacity) / float(max_capacity)
+	return float(remaining_capacity) / float(max_capacity) * 100

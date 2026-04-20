@@ -16,7 +16,6 @@ func _ready() -> void:
 	normal_inventory = player.normal_inventory
 	cylinder_slot = player.cylinder_slot
 
-
 func add_item(_data: ItemData, _index: int, _quantity: int = 1) -> bool:
 	var item_class = _data.get_script().get_global_name()
 	inventory_ui = player.inventory_ui

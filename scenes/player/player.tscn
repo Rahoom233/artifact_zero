@@ -207,3 +207,5 @@ script = ExtResource("9_je7p5")
 
 [node name="player status ui" parent="CanvasLayer" unique_id=791231009 instance=ExtResource("9_5gtgg")]
 visible = false
+
+[connection signal="reached_new_tile" from="." to="health and oxygen manager" method="_on_player_reached_new_tile"]

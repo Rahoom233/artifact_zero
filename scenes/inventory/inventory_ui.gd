@@ -11,6 +11,8 @@ var special_slots: Array
 var cylinder_slot: InventorySlot
 var normal_slots: Array
 
+var current_selected_item: ItemData = null
+
 
 func _ready() -> void:
 	
@@ -74,3 +76,25 @@ func update_info_screen(_data: ItemData, visibile: bool) -> void:
 		mini_screen.show_item_info(_data)
 	else:
 		mini_screen.hide_item_info(_data)
+
+func toggle_interact_for_item(item: ItemData):
+	if current_selected_item == item:
+		# Same item clicked again – close interact panel
+		mini_screen.hide_interact_panel()
+		current_selected_item = null
+	else:
+		# New item – close previous, open new
+		if current_selected_item:
+			mini_screen.hide_interact_panel()
+		current_selected_item = item
+		mini_screen.show_interact_panel(item)
+
+func get_current_selected_item() -> ItemData:
+	return current_selected_item
+
+# Call this when an action is performed (use, equip, drop)
+func on_item_action_completed():
+	# Optionally close the interact panel after action
+	if current_selected_item:
+		mini_screen.hide_interact_panel()
+		current_selected_item = null

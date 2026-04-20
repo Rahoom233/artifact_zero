@@ -7,10 +7,12 @@ signal died()
 signal cylinder_depleted()   # emitted when cylinder runs out
 
 @export var max_health: int = 5
-@export var oxygen_drain_per_step: int = 1
+@export var oxygen_drain_after_step: int = 1
+var tiles_walked: int #the tile player has walked on after consuming oxygen
 
 var current_health: int
 var active_cylinder: ItemDataCylinder   # reference to the equipped cylinder (set by player)
+
 
 var is_alive: bool = true
 
@@ -28,7 +30,8 @@ func consume_oxygen() -> void:
 	if not is_alive or not active_cylinder:
 		return
 	
-	var new_remaining = active_cylinder.consume(oxygen_drain_per_step)
+	var new_remaining = active_cylinder.consume(oxygen_drain_after_step)
+	print(new_remaining)
 	oxygen_changed.emit(new_remaining, active_cylinder.max_capacity)
 	
 	if new_remaining <= 0:
@@ -55,3 +58,7 @@ func die() -> void:
 	is_alive = false
 	died.emit()
 	# game over logic
+
+
+func _on_player_reached_new_tile() -> void:
+	tiles_walked += 1

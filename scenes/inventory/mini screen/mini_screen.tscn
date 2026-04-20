@@ -3,20 +3,12 @@
 [ext_resource type="Script" uid="uid://buvfgwpo2secb" path="res://scenes/inventory/mini screen/mini_screen.gd" id="1_0spxc"]
 [ext_resource type="Texture2D" uid="uid://dhyddeng2rgek" path="res://assets/art/cyro mini/Cryo's Mini Items/Items/Gem_13.png" id="1_pbp0p"]
 
-[node name="mini screen element" type="Control" unique_id=1725283152]
+[node name="mini screen element" type="Control" unique_id=118663212]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 192.0
-offset_bottom = 192.0
 script = ExtResource("1_0spxc")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1067051429]
-visible = false
-layout_mode = 0
-offset_right = 192.0
-offset_bottom = 192.0
-
-[node name="item info" type="Control" parent="." unique_id=1419168145]
+[node name="InfoPanel" type="Control" parent="." unique_id=1419168145]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="item info" unique_id=391533918]
+[node name="TextureRect" type="TextureRect" parent="InfoPanel" unique_id=391533918]
 layout_mode = 0
 offset_right = 92.0
 offset_bottom = 92.0
@@ -33,21 +25,86 @@ grow_vertical = 2
 texture = ExtResource("1_pbp0p")
 expand_mode = 1
 
-[node name="name" type="Label" parent="item info" unique_id=1157849199]
+[node name="name" type="Label" parent="InfoPanel" unique_id=1157849199]
 layout_mode = 0
 offset_left = 5.0
-offset_top = 150.0
+offset_top = 145.0
 offset_right = 60.0
-offset_bottom = 173.0
+offset_bottom = 168.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Name: "
 
-[node name="Panel" type="PanelContainer" parent="." unique_id=1638562315]
+[node name="gas remaining" type="Label" parent="InfoPanel" unique_id=429584367]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 165.0
+offset_right = 112.0
+offset_bottom = 188.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Remaing gas: "
+
+[node name="InteractPanel" type="Control" parent="." unique_id=1190253439]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="InteractPanel" unique_id=1067051429]
 visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 192.0
+offset_bottom = 192.0
 
-[node name="Button" type="Button" parent="Panel" unique_id=246959083]
-layout_mode = 2
+[node name="Use button" type="Button" parent="InteractPanel" unique_id=246959083]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 80.0
+offset_bottom = 80.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "1"
+
+[node name="equip button" type="Button" parent="InteractPanel" unique_id=114922659]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+offset_left = 112.0
+offset_top = 10.0
+offset_right = 182.0
+offset_bottom = 80.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "2"
+
+[node name="toss button" type="Button" parent="InteractPanel" unique_id=398723201]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+offset_left = 10.0
+offset_top = 90.0
+offset_right = 80.0
+offset_bottom = 160.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "3"
+
+[node name="Button4" type="Button" parent="InteractPanel" unique_id=359903681]
+visible = false
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+offset_left = 112.0
+offset_top = 90.0
+offset_right = 182.0
+offset_bottom = 160.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "4"
+
+[connection signal="pressed" from="InteractPanel/Use button" to="." method="_on_use_pressed"]
+[connection signal="pressed" from="InteractPanel/equip button" to="." method="_on_equip_pressed"]
+[connection signal="pressed" from="InteractPanel/toss button" to="." method="_on_drop_pressed"]

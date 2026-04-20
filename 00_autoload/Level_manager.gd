@@ -48,6 +48,9 @@ func load_first_room():
 	load_room_by_type(0)  # empty chamber
 
 func Change_level(move_direction: String):
+	get_tree().paused = true
+	await Transition.fade_out()
+	
 	update_room_on_player_luck()
 	
 	var next_type = get_random_chamber_type()
@@ -73,8 +76,6 @@ func load_room_by_type(type_index: int):
 		print("Error: Could not load scene at path: ", path)
 		return
 	#changing scene
-	get_tree().paused = true
-	await Transition.fade_out()
 	
 	get_tree().call_deferred("change_scene_to_packed", scene)
 	print("room loaded: ", type_name)
