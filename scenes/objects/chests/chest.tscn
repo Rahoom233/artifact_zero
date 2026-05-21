@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d1i7054hmib2p"]
+
+[ext_resource type="Script" uid="uid://c7idgptoaod06" path="res://scenes/objects/chests/chest.gd" id="1_svk0a"]
+[ext_resource type="Texture2D" uid="uid://m7cwjrcy7jov" path="res://assets/art/objects/chests/yellow chest.png" id="1_u1ok2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svk0a"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt2yb"]
+size = Vector2(8, 8)
+
+[node name="chest" type="Node2D" unique_id=1235458480]
+script = ExtResource("1_svk0a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=491501743]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1436894163]
+shape = SubResource("RectangleShape2D_svk0a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2128931520]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1678283794]
+shape = SubResource("RectangleShape2D_dt2yb")
+debug_color = Color(0.97148913, 0, 0.4508493, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1524154027]
+texture = ExtResource("1_u1ok2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

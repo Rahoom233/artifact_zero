@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw5pp8m7fiwre"
-path="res://.godot/imported/cylinder niddle.png-e24236bc17ef4da6df08ce20e6ee155f.ctex"
+uid="uid://bdvvep204c4qn"
+path="res://.godot/imported/green cylinder.png-269aa7dc26b16de097a2b65823499a0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/ui/inventory ui/cylinder niddle.png"
-dest_files=["res://.godot/imported/cylinder niddle.png-e24236bc17ef4da6df08ce20e6ee155f.ctex"]
+source_file="res://assets/art/items/cylinders/big cylinders icons/green cylinder.png"
+dest_files=["res://.godot/imported/green cylinder.png-269aa7dc26b16de097a2b65823499a0f.ctex"]
 
 [params]
 

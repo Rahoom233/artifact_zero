@@ -7,15 +7,9 @@
 [ext_resource type="Resource" uid="uid://dgrk825nrwb1m" path="res://resources/inventory/player inventorys/Special inventory.tres" id="3_qek5x"]
 [ext_resource type="Resource" uid="uid://webvqelecaes" path="res://resources/inventory/player inventorys/Normal inventory.tres" id="4_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://b8hs3oc1v3xkg" path="res://scenes/inventory/inventory_ui.tscn" id="4_lvxji"]
-[ext_resource type="Resource" uid="uid://4tem0tc47qr5" path="res://resources/inventory/items/cylinders/red_cylinder.tres" id="5_h17s1"]
-[ext_resource type="Script" uid="uid://cr5i01k5c1swj" path="res://resources/inventory/scripts/slot_data.gd" id="6_je7p5"]
+[ext_resource type="Resource" uid="uid://c34njd58s2vdw" path="res://resources/inventory/player inventorys/Gas canister slot.tres" id="5_h17s1"]
 [ext_resource type="PackedScene" uid="uid://bvb1dp8j5r1lh" path="res://scenes/player health ui/player_status_ui.tscn" id="9_5gtgg"]
 [ext_resource type="Script" uid="uid://dayu2ax0xajt3" path="res://scenes/player/scripts/health_and_oxegyn_manager.gd" id="9_je7p5"]
-
-[sub_resource type="Resource" id="Resource_fm80t"]
-script = ExtResource("6_je7p5")
-item_data = ExtResource("5_h17s1")
-metadata/_custom_type_script = "uid://cr5i01k5c1swj"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("1_8afob")
@@ -180,7 +174,7 @@ move_speed = 40.0
 jewel_inventory = ExtResource("2_0owmy")
 special_inventory = ExtResource("3_qek5x")
 normal_inventory = ExtResource("4_5gtgg")
-cylinder_slot = SubResource("Resource_fm80t")
+cylinder_slot = ExtResource("5_h17s1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=364799543]
 sprite_frames = SubResource("SpriteFrames_fcs02")
@@ -202,6 +196,7 @@ collide_with_areas = true
 script = ExtResource("9_je7p5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1744087837]
+visible = false
 
 [node name="inventory ui" parent="CanvasLayer" unique_id=1106080643 instance=ExtResource("4_lvxji")]
 

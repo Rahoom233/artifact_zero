@@ -65,8 +65,10 @@ func update_button_labels(item: ItemData):
 			use_button.text = "Drink"
 			use_button.visible = true
 		"ItemDataJewel":
-			equip_button.text = "Equip"
-			equip_button.visible = true
+			pass
+		"ItemDataFood":
+			use_button.text = "Use"
+			use_button.visible = true
 		_:
 			use_button.text = "Use"
 			use_button.visible = true
@@ -78,9 +80,9 @@ func _on_use_pressed():
 	get_parent().on_item_action_completed()  # call up to inventory_ui
 
 func _on_equip_pressed():
-	print("Equip: ", current_item.name)
+	PlayerInventoryManager.equip_cylinder(current_item)
 	get_parent().on_item_action_completed()
 
 func _on_drop_pressed():
-	print("Drop: ", current_item.name)
+	PlayerInventoryManager.drop_item(current_item)
 	get_parent().on_item_action_completed()

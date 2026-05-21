@@ -17,8 +17,6 @@ var is_pushing: bool = false
 @export var special_inventory: InventoryData
 @export var normal_inventory: InventoryData
 @export var cylinder_slot: SlotData
-#	set(value):
-#		update_active_cylinder(value)
 var inventory_visible: bool = false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -35,7 +33,7 @@ func _ready() -> void:
 	target_position = position
 	inventory_ui.hide_ui()
 	print("cylinder slot  ",cylinder_slot)
-	update_active_cylinder(cylinder_slot)
+	update_active_cylinder(cylinder_slot.item_data)
 	
 	inventory_ui.update_jewel_slot_datas(jewel_inventory.slot_datas)
 	inventory_ui.update_special_slot_datas(special_inventory.slot_datas)
@@ -127,7 +125,28 @@ func can_move(direction: Vector2) -> bool:
 		is_moving = true
 		return true
 	
-		#region raycast checking statue
+	return push_statue(collider, direction)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("inventory"):
+		if inventory_visible:
+			$CanvasLayer.visible = false
+			inventory_ui.hide_ui()
+			inventory_visible = false
+			status_ui.visible = true
+		else:
+			$CanvasLayer.visible = true
+			inventory_ui.show_ui()
+			inventory_visible = true
+			status_ui.visible = false
+
+func update_active_cylinder(_data: ItemData) -> ItemData:
+	var item: ItemDataCylinder = _data
+	if health_oxygen_manager:
+		health_oxygen_manager.set_active_cylinder(item)
+	return
+
+func push_statue(collider, direction: Vector2) -> bool:
 	if collider is Area2D:
 		# It's a statue – see if we can push it
 		var statue = collider.get_parent()
@@ -160,22 +179,3 @@ func can_move(direction: Vector2) -> bool:
 	
 	ray_cast.global_position = global_position
 	return false
-	
-	#endregion
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("inventory"):
-		if inventory_visible:
-			inventory_ui.hide_ui()
-			inventory_visible = false
-			status_ui.visible = true
-		else:
-			inventory_ui.show_ui()
-			inventory_visible = true
-			status_ui.visible = false
-
-func update_active_cylinder(value: SlotData) -> ItemData:
-	var item: ItemDataCylinder = value.item_data
-	if health_oxygen_manager:
-		health_oxygen_manager.set_active_cylinder(item)
-	return

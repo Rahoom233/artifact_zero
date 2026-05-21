@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s1nry3fshbd2"
-path="res://.godot/imported/cylinder ui.png-b5877439059821ae4a60cdf3ffe310d1.ctex"
+uid="uid://bodvcuhlfc40w"
+path="res://.godot/imported/gas cylinder bar.png-8e0e6b3c85ed67c09872aa0538722b00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/ui/inventory ui/cylinder ui.png"
-dest_files=["res://.godot/imported/cylinder ui.png-b5877439059821ae4a60cdf3ffe310d1.ctex"]
+source_file="res://assets/art/items/cylinders/gas cylinder bar.png"
+dest_files=["res://.godot/imported/gas cylinder bar.png-8e0e6b3c85ed67c09872aa0538722b00.ctex"]
 
 [params]
 

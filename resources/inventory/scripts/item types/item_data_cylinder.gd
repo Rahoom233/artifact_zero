@@ -5,6 +5,7 @@ class_name ItemDataCylinder
 @export var max_capacity: int
 @export var remaining_capacity: int
 @export_enum("common", "uncommon", "rare") var rarity: String
+@export var big_cylinder_icon: Texture2D
 
 func consume(amount: int) -> int:
 	remaining_capacity = max(0, remaining_capacity - amount)

@@ -8,7 +8,7 @@
 [sub_resource type="Resource" id="Resource_b2af5"]
 script = ExtResource("2_prcu7")
 item_data = ExtResource("4_j1vxo")
-quantity = 12
+quantity = 16
 metadata/_custom_type_script = "uid://cr5i01k5c1swj"
 
 [sub_resource type="Resource" id="Resource_p5jxr"]
@@ -18,5 +18,5 @@ metadata/_custom_type_script = "uid://cr5i01k5c1swj"
 
 [resource]
 script = ExtResource("1_6gryw")
-slot_datas = Array[ExtResource("2_prcu7")]([null, SubResource("Resource_b2af5"), null, SubResource("Resource_p5jxr"), null, null, null, null, null, null])
+slot_datas = Array[ExtResource("2_prcu7")]([SubResource("Resource_b2af5"), null, SubResource("Resource_p5jxr"), null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://bon2hblketog4"

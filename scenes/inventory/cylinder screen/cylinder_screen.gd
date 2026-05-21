@@ -12,3 +12,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var item: ItemDataCylinder = cylinder_slot.item_data
 	$TextureProgressBar.value = item.get_percentage()
+	
+	texture = item.big_cylinder_icon

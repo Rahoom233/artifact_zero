@@ -10,7 +10,6 @@ func _ready() -> void:
 	$Sprite2D.texture = item_data.texture
 
 func _on_body_entered(body: Node2D) -> void:
-	print("man")
 	if body is Player:
 		player = body
 		player_entered = true
