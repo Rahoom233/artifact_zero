@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp8rg6oh3dbfk"
-path="res://.godot/imported/campfire.png-058e1415681c5cec0a4459640115b295.ctex"
+uid="uid://bm6848hb6r5k0"
+path="res://.godot/imported/normal keys.png-be0d182c7599d18f71dffbff7b43fbc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/chambers/rest chamber/campfire.png"
-dest_files=["res://.godot/imported/campfire.png-058e1415681c5cec0a4459640115b295.ctex"]
+source_file="res://assets/art/items/areas/area 1/normal keys.png"
+dest_files=["res://.godot/imported/normal keys.png-be0d182c7599d18f71dffbff7b43fbc8.ctex"]
 
 [params]
 

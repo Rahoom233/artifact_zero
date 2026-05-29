@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://1evc5e6esnvm" path="res://scenes/player/player.tscn" id="5_tcgbi"]
 [ext_resource type="PackedScene" uid="uid://ba4456l1mj72x" path="res://scenes/inventory/drop_out_item.tscn" id="6_0dqwy"]
 [ext_resource type="Resource" uid="uid://bic3d56y6orfv" path="res://resources/inventory/items/food/green apple.tres" id="7_2sg3y"]
-[ext_resource type="Resource" uid="uid://c2kjwlt1donwu" path="res://resources/inventory/items/potions/red potion.tres" id="7_msjq7"]
 [ext_resource type="Resource" uid="uid://d3wjop1wvhc0y" path="res://resources/inventory/items/Jewels/crystal.tres" id="7_olcs3"]
 [ext_resource type="Resource" uid="uid://malsb0q711hj" path="res://resources/inventory/items/cylinders/green_cylinder.tres" id="8_rdov3"]
+[ext_resource type="Resource" uid="uid://c1uyhm5lcsavi" path="res://resources/inventory/items/food/apple.tres" id="8_tjp5r"]
 [ext_resource type="PackedScene" uid="uid://d1i7054hmib2p" path="res://scenes/objects/chests/chest.tscn" id="11_rdov3"]
 [ext_resource type="Resource" uid="uid://2ua2vpk5rsi6" path="res://resources/loot tables/area 1/normal chest.tres" id="12_tjp5r"]
 
@@ -63,11 +63,11 @@ item_data = ExtResource("8_rdov3")
 
 [node name="drop out item2" parent="." unique_id=1326190368 instance=ExtResource("6_0dqwy")]
 position = Vector2(-16, 20)
-item_data = ExtResource("7_msjq7")
+item_data = ExtResource("8_tjp5r")
 
 [node name="drop out item6" parent="." unique_id=1813059402 instance=ExtResource("6_0dqwy")]
 position = Vector2(-20, 4)
-item_data = ExtResource("7_msjq7")
+item_data = ExtResource("8_tjp5r")
 
 [node name="drop out item5" parent="." unique_id=1582577663 instance=ExtResource("6_0dqwy")]
 position = Vector2(36, 44)

@@ -23,7 +23,8 @@ func add_slot_item(_data: SlotData) -> void:
 	item_data = _data.item_data
 	texture_rect.texture = item_data.texture
 	
-	if _data.quantity > 1:
+	if _data.quantity > 0 and item_data.stackable:
+		print(item_data.name, " , quantity: " , _data.quantity)
 		label.text = str(_data.quantity)
 		label.visible = true
 	pass

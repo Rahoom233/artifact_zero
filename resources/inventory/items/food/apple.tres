@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDataFood" format=3 uid="uid://c1uyhm5lcsavi"]
+
+[ext_resource type="Script" uid="uid://di5p21eunw8t0" path="res://resources/inventory/scripts/item types/item_data_food.gd" id="1_g6k7u"]
+[ext_resource type="Texture2D" uid="uid://b5a0tjgktrrar" path="res://assets/art/items/areas/area 1/items.png" id="2_43lv2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fc13"]
+atlas = ExtResource("2_43lv2")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_g6k7u")
+health_increase = 2
+id = "apple"
+name = "Apple"
+texture = SubResource("AtlasTexture_2fc13")
+stackable = true
+max_stack = 6
+metadata/_custom_type_script = "uid://di5p21eunw8t0"

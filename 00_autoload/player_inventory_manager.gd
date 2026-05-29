@@ -79,8 +79,12 @@ func remove_item(_data: ItemData) -> bool:
 		if slot != null:
 			var item: ItemData = slot.item_data
 			if item.id == deleting_id:
-				normal_inventory.slot_datas[i] = null
-				inventory_ui.update_normal_slot_datas(normal_inventory.slot_datas)
+				if _data.stackable == false or slot.quantity <= 1 :
+					normal_inventory.slot_datas[i] = null
+					inventory_ui.update_normal_slot_datas(normal_inventory.slot_datas)
+				else:
+					slot.quantity -= 1
+					inventory_ui.update_normal_slot_datas(normal_inventory.slot_datas)
 	
 	for i in range(special_inventory.slot_datas.size()):
 		var slot: SlotData = special_inventory.slot_datas[i]
@@ -187,4 +191,9 @@ func _get_index(_data: ItemData) -> int:
 func drop_item(_data: ItemData) -> void:
 	remove_item(_data)
 
+func eat(_data: ItemDataFood) -> void:
+	var health = _data.health_increase
+	print(health)
+	remove_item(_data)
+	pass
 #endregion

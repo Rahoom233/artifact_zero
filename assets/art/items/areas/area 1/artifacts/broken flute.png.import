@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8mwny2td6vjb"
-path="res://.godot/imported/key.png-c32f1de7847985309508a724cacb1676.ctex"
+uid="uid://cbslme3bvgtyk"
+path="res://.godot/imported/broken flute.png-0e61f03775edcde286533def4daad58a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Tileset/key.png"
-dest_files=["res://.godot/imported/key.png-c32f1de7847985309508a724cacb1676.ctex"]
+source_file="res://assets/art/items/areas/area 1/artifacts/broken flute.png"
+dest_files=["res://.godot/imported/broken flute.png-0e61f03775edcde286533def4daad58a.ctex"]
 
 [params]
 

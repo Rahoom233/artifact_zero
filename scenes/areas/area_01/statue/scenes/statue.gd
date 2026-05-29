@@ -67,5 +67,8 @@ func push(direction: Vector2):
 	if on_base:
 		return
 	# Move statue by one tile (size 8)
-	global_position += direction * 8
-	
+	for i in 4:
+		global_position += direction * 2
+		await get_tree().create_timer(0.1).timeout
+
+	#dane nahi hoa
